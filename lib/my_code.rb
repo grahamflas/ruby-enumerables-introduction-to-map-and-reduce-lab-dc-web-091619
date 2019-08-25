@@ -1,3 +1,5 @@
+###############  MAP-LIKE METHODS  ###############
+
 def map_to_negativize(array)
     new_array = Array.new
 
@@ -36,4 +38,26 @@ def map_to_square(array)
     end
 
     return new_array
+end
+
+###############  REDUCE-LIKE METHODS  ###############
+
+def reduce_to_total(array)
+    total = 0
+
+    (array.length).times do |index|
+        total = total + array[index]
+    end
+
+    return total
+end
+
+def reduce_to_true(array)
+    (array.length).times do |index|
+        if !array[index]
+            return false
+        end
+    end
+
+    return true
 end
